@@ -1,0 +1,9 @@
+{
+  "name": "simple-pki",
+  "build": { "dockerfile": "Dockerfile" },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+  "overrideCommand": false,
+  "runArgs": ["--init", "--privileged", "--name=simple-pki", "--hostname=simple-pki"],
+  "remoteUser": "vscode"
+}
