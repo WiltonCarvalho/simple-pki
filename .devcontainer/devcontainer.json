@@ -1,9 +1,10 @@
 {
-  "name": "simple-pki",
-  "build": { "dockerfile": "Dockerfile" },
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "features": {
+      "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+      "ghcr.io/devcontainers/features/common-utils:2": {},
+      "ghcr.io/devcontainers/features/node:1": {}
+  },
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-  "workspaceFolder": "/workspace",
-  "overrideCommand": false,
-  "runArgs": ["--init", "--privileged", "--name=simple-pki", "--hostname=simple-pki"],
-  "remoteUser": "vscode"
+  "workspaceFolder": "/workspace"
 }
